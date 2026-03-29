@@ -1,0 +1,66 @@
+{
+  "name": "@supramundane/at",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Supramundane Atmosphere",
+  "author": "Robin Berjon <robin@berjon.com>",
+  "license": "Apache-2.0",
+  "scripts": {},
+  "bin": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darobin/supramundane-at.git"
+  },
+  "exports": {
+    "./configuration": "./configuration.js"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "mocha": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "devDependencies": {
+    "@ngrok/ngrok": "^1.7.0",
+    "eslint": "^8.26.0",
+    "pino-pretty": "^13.1.3"
+  },
+  "dependencies": {
+    "@atcute/cbor": "^2.3.2",
+    "@atcute/cid": "^2.4.1",
+    "@atproto/api": "^0.19.5",
+    "@atproto/identity": "^0.4.12",
+    "@atproto/lex": "^0.0.23",
+    "@atproto/lexicon": "^0.6.2",
+    "@atproto/oauth-client-node": "^0.3.17",
+    "@atproto/sync": "^0.2.0",
+    "@atproto/syntax": "^0.5.2",
+    "@atproto/xrpc-server": "^0.10.18",
+    "@dasl/rasl": "^1.2.1",
+    "@duckdb/node-api": "^1.5.1-r.1",
+    "acme-dns-01-gandi": "github:darobin/acme-dns-01-gandi",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1",
+    "greenlock": "^2.8.9",
+    "greenlock-store-fs": "^3.2.2",
+    "install": "^0.13.0",
+    "iron-session": "^8.0.4",
+    "mime": "^4.1.0",
+    "mime-types": "^3.0.2",
+    "multer2": "^1.1.1",
+    "multiformats": "^13.4.2",
+    "pino": "^10.3.1",
+    "tmp-promise": "^3.0.3",
+    "vhost": "^3.0.2",
+    "wasmagic": "^1.0.8",
+    "ws": "^8.20.0"
+  }
+}
