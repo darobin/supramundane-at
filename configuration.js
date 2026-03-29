@@ -6,11 +6,13 @@ export default class Configuration {
     isProd: (env.NODE_ENV === 'production'),
   };
   constructor (c) {
-    ['host', 'ngrokToken', 'port'].forEach(k => {
-      if (c[k]) this.#c[k] = c[k];
-    });
-    ['host', 'port'].forEach(k => {
-      if (!this.#c[k]) throw new Error(`Configuring ${k} is required`);
+    const required = ['host', 'port'];
+    const allFields = required.concat([]);
+    (this.#c.isProd ? allFields : required).push('ngrokToken');
+    const missing = required.filter(r => typeof c[r] === 'undefined');
+    if (missing.length) throw new Error(`The following configurations are required: ${missing.join(', ')}`);
+    allFields.forEach(k => {
+      if (typeof c[k] !== 'undefined') this.#c[k] = c[k];
     });
   }
   async init () {
