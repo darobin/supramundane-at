@@ -25,11 +25,19 @@ It's also important to call `init()` if you want to ensure that everything
 is set up correctly, particularly for local development.
 
 - `new Configuration(options)`. Options:
+  - `dataDir`: data directory
   - `host`: the domain
   - `port`: the port
+  - `name`: the name
   - `ngrokToken`: if you want to support OAuth
+  - `oauthScope`: the OAuth scope you want, defaults to `atproto transition:generic`
+  - `cookieSecret`: the secret for session cookies
+  - `cookieName`: the name of the session cookie, defaults to `supramundane-sid`
 - `async init()`. Init.
 - `authDomain`. The OAuth domain.
+- `dataDir`. Where data is stored.
 - `host`. Host
 - `isProd`. Is this in prod?
 - `port`. Port
+- `name`. Name of the app
+- `sessionParams`. Session cookie parameters

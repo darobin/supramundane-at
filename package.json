@@ -12,7 +12,10 @@
     "url": "https://github.com/darobin/supramundane-at.git"
   },
   "exports": {
-    "./configuration": "./configuration.js"
+    "./configuration": "./configuration.js",
+    "./context": "./context.js",
+    "./db": "./db.js",
+    "./oauth": "./oauth.js"
   },
   "eslintConfig": {
     "env": {
